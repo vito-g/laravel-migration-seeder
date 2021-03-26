@@ -11,8 +11,14 @@ class MoreCoffeesTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        //
+      for ($i = 0; $i < 10; $i++) {
+         $coffee = new Coffee();
+         $coffee->quality = $faker->text(20);
+         $coffee->origin = $faker->text(20);
+         $coffee->description =$faker->text(2048);
+         $coffee->caffeine = $faker->text(10);
+         $coffee->save();
     }
 }
