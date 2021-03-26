@@ -17,8 +17,9 @@ class MoreCoffeesTableSeeder extends Seeder
          $coffee = new Coffee();
          $coffee->quality = $faker->text(20);
          $coffee->origin = $faker->text(20);
-         $coffee->description =$faker->text(2048);
+         $coffee->description = $faker->text(2048);
          $coffee->caffeine = $faker->text(10);
          $coffee->save();
     }
+  }
 }
